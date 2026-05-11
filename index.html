@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home · Olivia's Send-Off</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
 
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:"Jost",sans-serif; background:#fff; overflow-x:hidden; }
+#nav {
+  position:fixed; top:0; left:0; right:0; z-index:999;
+  display:flex; justify-content:center; align-items:center;
+  height:48px; overflow-x:auto;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 2px 16px rgba(0,0,0,0.07);
+  -webkit-overflow-scrolling:touch; gap:0;
+}
+#nav::-webkit-scrollbar { display:none; }
+.tab {
+  padding:0 1.2rem; height:48px; line-height:48px;
+  font-size:0.58rem; font-weight:400; letter-spacing:0.18em;
+  text-transform:uppercase; color:#999;
+  text-decoration:none; white-space:nowrap; flex-shrink:0;
+  position:relative; transition:color 0.2s;
+}
+.tab::after {
+  content:""; position:absolute; bottom:0; left:0.8rem; right:0.8rem;
+  height:2px; background:#E8856A;
+  transform:scaleX(0); transform-origin:center; transition:transform 0.25s;
+}
+.tab:hover { color:#555; }
+.tab.on { color:#E8856A; }
+.tab.on::after { transform:scaleX(1); }
+#wrap { margin-top:48px; position:relative; width:100%; }
+#wrap img { display:block; width:100%; height:auto; }
+@media(max-width:600px){
+  #nav { justify-content:flex-start; padding:0 0.3rem; }
+  .tab { padding:0 0.85rem; font-size:0.52rem; }
+}
+
+
+.sp {
+  position:absolute; border-radius:50%;
+  background:radial-gradient(circle,#FFE566 0%,#FFD700 100%);
+  pointer-events:none;
+  animation:twinkle 2.5s ease-in-out infinite;
+  box-shadow:0 0 6px 2px rgba(255,215,0,0.5);
+}
+.sp1{width:9px;height:9px;top:2%;left:7%;animation-delay:0s}
+.sp2{width:6px;height:6px;top:1%;left:54%;animation-delay:0.5s}
+.sp3{width:8px;height:8px;top:3%;left:86%;animation-delay:1s}
+.sp4{width:5px;height:5px;top:5%;left:28%;animation-delay:1.4s}
+.sp5{width:7px;height:7px;top:1.5%;left:71%;animation-delay:0.8s}
+.sp6{width:4px;height:4px;top:7%;left:93%;animation-delay:1.9s}
+@keyframes twinkle{
+  0%,100%{opacity:0;transform:scale(0.3) rotate(0deg)}
+  50%{opacity:1;transform:scale(1.4) rotate(25deg)}
+}
+
+</style>
+</head>
+<body>
+<nav id="nav">
+<a class="tab on" href="index.html">Home</a>
+<a class="tab" href="travel.html">Travel</a>
+<a class="tab" href="itinerary.html">Itinerary</a>
+<a class="tab" href="packing.html">Pack List</a>
+</nav>
+<div id="wrap">
+  <img src="Send-Off__1_.svg" alt="Home">
+  
+<div class="sp sp1"></div><div class="sp sp2"></div><div class="sp sp3"></div>
+<div class="sp sp4"></div><div class="sp sp5"></div><div class="sp sp6"></div>
+</div>
+</body>
+</html>
